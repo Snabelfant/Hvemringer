@@ -1,26 +1,22 @@
 package dag.hvemringer
 
 import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.nullValue
 import org.junit.Assert.*
 import org.junit.Test
 
 class HvemDerTest {
 
     @Test
-    fun testFinnes() {
-        val s = HvemDer.find("91667821")
-        assertThat( s, `is`("Ellen Hermansen, Son, Vestby"))
-    }
-
-    @Test
     fun testFinnesIkke() {
-        val s = _1881.find("83480486")
-        assertThat( s, `is`("Ingen treff"))
+        val s = HvemDer.find("83480486")
+        assertThat( s, nullValue())
     }
 
     @Test
-    fun testReservert() {
-        val s = _1881.find("93480001")
-        assertThat( s, `is`("Reservert"))
+    fun testFinnes() {
+        val s = HvemDer.find("46667834")
+        assertThat( s, `is`("brukes av firmaet FIRMANAVN UKJENT til telefonsalg eller andre uønskede oppringninger."))
     }
+
 }

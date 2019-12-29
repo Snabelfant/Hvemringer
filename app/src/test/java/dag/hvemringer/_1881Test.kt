@@ -1,6 +1,7 @@
 package dag.hvemringer
 
 import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.nullValue
 import org.junit.Assert.*
 import org.junit.Test
 
@@ -15,7 +16,7 @@ class _1881Test {
     @Test
     fun testFinnesIkke() {
         val s = _1881.find("83480486")
-        assertThat( s, `is`("Ingen treff"))
+        assertThat( s, nullValue())
     }
 
     @Test
